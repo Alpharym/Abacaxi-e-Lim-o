@@ -1,99 +1,110 @@
-#Classes
-
-class Matricula {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int MATRICULA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
-};
-
-inline int Matricula::getValor() const {
-    return valor;
-}
-
-class Senha {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int SENHA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
-};
-
-inline int Senha::getValor() const {
-    return valor;
-}
+#ifndef DOMINIOS_CPP_INCLUDED
+#define DOMINIOS_CPP_INCLUDED
+ /// DOMINIOS.H
 
 class Dominio {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int SENHA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
 };
 
-inline int Senha::getValor() const {
+class Matricula : public Dominio{
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string MATRICULA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
+};
+
+inline string Matricula::getValor() const {
     return valor;
 }
 
-class Classe {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int SENHA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
+class Senha : public Dominio{
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
 };
 
-inline int Senha::getValor() const {
+inline string Senha::getValor() const {
     return valor;
 }
 
-class Data {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int SENHA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
-};
-
-inline int Senha::getValor() const {
+inline string Senha::getValor() const {
     return valor;
 }
 
-class resultado {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int SENHA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
+class Classe : public Dominio{
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
 };
 
-inline int Senha::getValor() const {
+inline string Senha::getValor() const {
     return valor;
 }
 
-class Telefone {
-private:
-    int valor;
-    void validar(int);
-public:
-    const static int SENHA_INVALIDA = 12345;
-    void setValor(int);
-    int getValor() const;
+class Data : public Dominio{
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
 };
 
-inline int Senha::getValor() const {
+inline string Senha::getValor() const {
     return valor;
 }
+
+class resultado : public Dominio{
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
+};
+
+inline string Senha::getValor() const {
+    return valor;
+}
+
+class Telefone : public Dominio{
+    private:
+        string valor;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        void setValor(string);
+        string getValor() const;
+};
+
+inline string Senha::getValor() const {
+    return valor;
+}
+
+class Codigo : public Dominio{
+    private:
+        static const regex PADRAO_ACEITO;
+        void validar(string);
+    public:
+        const static string SENHA_INVALIDA = 12345;
+        Codigo(const string&)
+};
